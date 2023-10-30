@@ -50,31 +50,6 @@ const routes = [
 
     {
       meta: {
-        title: 'Testtable'
-      },
-      path: '/testtable',
-      name: 'Testtable',
-      component: () => import('@/views/CRUD/Testtable/TesttableView.vue'),
-    },
-    {
-      meta: {
-        title: 'New Testtable'
-      },
-      path: '/testtable/new',
-      name: 'NewTesttable',
-      component: () => import('@/views/CRUD/Testtable/TesttableNew.vue'),
-    },
-    {
-      meta: {
-        title: 'Edit Testtable'
-      },
-      path: '/testtable/:id/edit',
-      name: 'EditTesttable',
-      component: () => import('@/views/CRUD/Testtable/TesttableEdit.vue'),
-    },
-
-    {
-      meta: {
         title: 'Roles'
       },
       path: '/roles',
@@ -96,6 +71,31 @@ const routes = [
       path: '/roles/:id/edit',
       name: 'EditRoles',
       component: () => import('@/views/CRUD/Roles/RolesEdit.vue'),
+    },
+
+    {
+      meta: {
+        title: 'Testtable'
+      },
+      path: '/testtable',
+      name: 'Testtable',
+      component: () => import('@/views/CRUD/Testtable/TesttableView.vue'),
+    },
+    {
+      meta: {
+        title: 'New Testtable'
+      },
+      path: '/testtable/new',
+      name: 'NewTesttable',
+      component: () => import('@/views/CRUD/Testtable/TesttableNew.vue'),
+    },
+    {
+      meta: {
+        title: 'Edit Testtable'
+      },
+      path: '/testtable/:id/edit',
+      name: 'EditTesttable',
+      component: () => import('@/views/CRUD/Testtable/TesttableEdit.vue'),
     },
 
   {

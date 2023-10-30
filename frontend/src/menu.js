@@ -30,17 +30,17 @@ export default [
 },
 
   {
-    to: '/testtable',
-    label: 'Testtable',
-    icon: mdiTable,
-    component: () => import('@/views/CRUD/Testtable/TesttableView.vue'),
-},
-
-  {
     to: '/roles',
     label: 'Roles',
     icon: mdiTable,
     component: () => import('@/views/CRUD/Roles/RolesView.vue'),
+},
+
+  {
+    to: '/testtable',
+    label: 'Testtable',
+    icon: mdiTable,
+    component: () => import('@/views/CRUD/Testtable/TesttableView.vue'),
 },
 
     {

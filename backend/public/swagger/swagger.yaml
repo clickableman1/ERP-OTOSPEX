@@ -12,11 +12,11 @@ tags:
   - name: users
     description: users managing API
 
-  - name: testtable
-    description: testtable managing API
-
   - name: roles
     description: roles managing API
+
+  - name: testtable
+    description: testtable managing API
 
 paths:
   /auth/signin/local:
@@ -182,105 +182,6 @@ paths:
       security:
         - bearer: [ ]
 
-  /testtable:
-    post:
-      tags:
-        - testtable
-      summary: "Add new item"
-      description: Add new item
-      consumes:
-        - application/json
-      produces:
-        - application/json
-      parameters:
-        - in: body
-          name: body
-          description: Add new item
-          required: true
-          schema:
-            $ref: "#/definitions/testtable"
-      responses:
-        '200':
-          description: The item was successfully added
-        '405':
-          description: Invalid input data
-        '500':
-          description: Some server error
-      security:
-        - bearer: [ ]
-    get:
-      tags:
-        - testtable
-      summary: "Get all item"
-      description: Add new item
-      consumes:
-        - application/json
-      produces:
-        - application/json
-      responses:
-        '200':
-          description: The item was successfully added
-        '405':
-          description: Invalid input data
-        '500':
-          description: Some server error
-      security:
-        - bearer: [ ]
-    put:
-      tags:
-        - testtable
-      summary: "Update the data of the selected item"
-      description: Update the data of the selected item
-      consumes:
-        - application/json
-      produces:
-        - application/json
-      parameters:
-        - name: "id"
-          in: path
-          description: "id that need to be updated"
-          required: true
-          type: "string"
-        - in: "body"
-          name: "body"
-          description: "Updated object"
-          required: true
-          schema:
-            $ref: "#/definitions/User"
-      responses:
-        '200':
-          description: The item was successfully updated
-        '405':
-          description: Invalid input data
-        '500':
-          description: Some server error
-      security:
-        - bearer: [ ]
-    delete:
-      tags:
-        - testtable
-      summary: "Delete selected item"
-      description: Update the data of the selected item
-      consumes:
-        - application/json
-      produces:
-        - application/json
-      parameters:
-        - name: "id"
-          in: path
-          description: "id that need to be updated"
-          required: true
-          type: "string"
-      responses:
-        '200':
-          description: "Successful operation"
-        '405':
-          description: testtable not found
-        '500':
-          description: Some server error
-      security:
-        - bearer: [ ]
-
   /roles:
     post:
       tags:
@@ -380,6 +281,105 @@ paths:
       security:
         - bearer: [ ]
 
+  /testtable:
+    post:
+      tags:
+        - testtable
+      summary: "Add new item"
+      description: Add new item
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Add new item
+          required: true
+          schema:
+            $ref: "#/definitions/testtable"
+      responses:
+        '200':
+          description: The item was successfully added
+        '405':
+          description: Invalid input data
+        '500':
+          description: Some server error
+      security:
+        - bearer: [ ]
+    get:
+      tags:
+        - testtable
+      summary: "Get all item"
+      description: Add new item
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: The item was successfully added
+        '405':
+          description: Invalid input data
+        '500':
+          description: Some server error
+      security:
+        - bearer: [ ]
+    put:
+      tags:
+        - testtable
+      summary: "Update the data of the selected item"
+      description: Update the data of the selected item
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: "id"
+          in: path
+          description: "id that need to be updated"
+          required: true
+          type: "string"
+        - in: "body"
+          name: "body"
+          description: "Updated object"
+          required: true
+          schema:
+            $ref: "#/definitions/User"
+      responses:
+        '200':
+          description: The item was successfully updated
+        '405':
+          description: Invalid input data
+        '500':
+          description: Some server error
+      security:
+        - bearer: [ ]
+    delete:
+      tags:
+        - testtable
+      summary: "Delete selected item"
+      description: Update the data of the selected item
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: "id"
+          in: path
+          description: "id that need to be updated"
+          required: true
+          type: "string"
+      responses:
+        '200':
+          description: "Successful operation"
+        '405':
+          description: testtable not found
+        '500':
+          description: Some server error
+      security:
+        - bearer: [ ]
+
 definitions:
   Auth:
     type: object
@@ -412,16 +412,6 @@ definitions:
     xml:
       name: users
 
-  testtable:
-    type: object
-    properties:
-
-      testfield:
-        type: "true"
-
-    xml:
-      name: testtable
-
   roles:
     type: object
     properties:
@@ -431,6 +421,16 @@ definitions:
 
     xml:
       name: roles
+
+  testtable:
+    type: object
+    properties:
+
+      testfield:
+        type: "true"
+
+    xml:
+      name: testtable
 
 securityDefinitions:
   bearer:

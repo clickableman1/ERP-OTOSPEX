@@ -15,13 +15,13 @@ class AddForeignKeysToTable extends Migration
 
         });
 
-        Schema::table('testtable', function (Blueprint $table) {
+        Schema::table('roles', function (Blueprint $table) {
             $table->foreign('created_by_user')->references('id')->on('users');
             $table->foreign('updated_by_user')->references('id')->on('users');
 
         });
 
-        Schema::table('roles', function (Blueprint $table) {
+        Schema::table('testtable', function (Blueprint $table) {
             $table->foreign('created_by_user')->references('id')->on('users');
             $table->foreign('updated_by_user')->references('id')->on('users');
 

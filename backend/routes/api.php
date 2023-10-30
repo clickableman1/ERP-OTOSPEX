@@ -5,8 +5,8 @@ use Illuminate\Support\Facades\Storage;
 
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\UsersController;
-use App\Http\Controllers\Api\TesttableController;
 use App\Http\Controllers\Api\RolesController;
+use App\Http\Controllers\Api\TesttableController;
 use App\Http\Controllers\Api\FilesController;
 
 Route::get('analytics', fn() => Storage::disk('local')->get('analytics.json'))->middleware('auth:api');
@@ -25,13 +25,13 @@ Route::group([
     Route::get('users/count', [UsersController::class, 'count']);
     Route::resource('users', UsersController::class);
 
-    Route::get('testtable/autocomplete', [TesttableController::class, 'findAllAutocomplete']);
-    Route::get('testtable/count', [TesttableController::class, 'count']);
-    Route::resource('testtable', TesttableController::class);
-
     Route::get('roles/autocomplete', [RolesController::class, 'findAllAutocomplete']);
     Route::get('roles/count', [RolesController::class, 'count']);
     Route::resource('roles', RolesController::class);
+
+    Route::get('testtable/autocomplete', [TesttableController::class, 'findAllAutocomplete']);
+    Route::get('testtable/count', [TesttableController::class, 'count']);
+    Route::resource('testtable', TesttableController::class);
 
 });
 
