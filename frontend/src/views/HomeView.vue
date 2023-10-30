@@ -13,16 +13,18 @@ import CardBoxWidget from '@/components/CardBoxWidget.vue'
 const titleStack = ref(['Admin', 'Dashboard'])
 
 const counts = reactive({
-  users: 0,testtable: 0,
+  users: 0,testtable: 0,roles: 0,
 })
 
 onMounted(() => {
   const fetchData = async () => {
     const { data: { count: users } } = await axios.get('/users/count');
     const { data: { count: testtable } } = await axios.get('/testtable/count');
+    const { data: { count: roles } } = await axios.get('/roles/count');
 
     counts.users = users;
     counts.testtable = testtable;
+    counts.roles = roles;
 
   };
   fetchData();
@@ -53,6 +55,12 @@ onMounted(() => {
         :icon="mdiInformation"
         :number="counts.testtable"
         label="Testtable"
+          /></a><a href="#/roles">
+        <CardBoxWidget
+        color="text-blue-500"
+        :icon="mdiInformation"
+        :number="counts.roles"
+        label="Roles"
           /></a>
 
     </div>

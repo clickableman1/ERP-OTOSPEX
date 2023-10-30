@@ -36,6 +36,13 @@ export default [
     component: () => import('@/views/CRUD/Testtable/TesttableView.vue'),
 },
 
+  {
+    to: '/roles',
+    label: 'Roles',
+    icon: mdiTable,
+    component: () => import('@/views/CRUD/Roles/RolesView.vue'),
+},
+
     {
       to: '/change_password',
       label: 'Change Password',

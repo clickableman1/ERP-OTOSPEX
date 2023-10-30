@@ -73,6 +73,31 @@ const routes = [
       component: () => import('@/views/CRUD/Testtable/TesttableEdit.vue'),
     },
 
+    {
+      meta: {
+        title: 'Roles'
+      },
+      path: '/roles',
+      name: 'Roles',
+      component: () => import('@/views/CRUD/Roles/RolesView.vue'),
+    },
+    {
+      meta: {
+        title: 'New Roles'
+      },
+      path: '/roles/new',
+      name: 'NewRoles',
+      component: () => import('@/views/CRUD/Roles/RolesNew.vue'),
+    },
+    {
+      meta: {
+        title: 'Edit Roles'
+      },
+      path: '/roles/:id/edit',
+      name: 'EditRoles',
+      component: () => import('@/views/CRUD/Roles/RolesEdit.vue'),
+    },
+
   {
     meta: {
       title: 'Change Password'
