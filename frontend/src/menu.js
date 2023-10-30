@@ -30,17 +30,94 @@ export default [
 },
 
   {
-    to: '/roles',
-    label: 'Roles',
+    to: '/suppliers',
+    label: 'Suppliers',
     icon: mdiTable,
-    component: () => import('@/views/CRUD/Roles/RolesView.vue'),
+    component: () => import('@/views/CRUD/Suppliers/SuppliersView.vue'),
 },
 
   {
-    to: '/testtable',
-    label: 'Testtable',
+    to: '/invoices',
+    label: 'Invoices',
     icon: mdiTable,
-    component: () => import('@/views/CRUD/Testtable/TesttableView.vue'),
+    component: () => import('@/views/CRUD/Invoices/InvoicesView.vue'),
+},
+
+  {
+    to: '/settings',
+    label: 'Settings',
+    icon: mdiTable,
+    component: () => import('@/views/CRUD/Settings/SettingsView.vue'),
+},
+
+  {
+    to: '/orders',
+    label: 'Orders',
+    icon: mdiTable,
+    component: () => import('@/views/CRUD/Orders/OrdersView.vue'),
+},
+
+  {
+    to: '/order_details',
+    label: 'Order details',
+    icon: mdiTable,
+    component: () => import('@/views/CRUD/Order_details/Order_detailsView.vue'),
+},
+
+  {
+    to: '/purchase_orders',
+    label: 'Purchase orders',
+    icon: mdiTable,
+    component: () => import('@/views/CRUD/Purchase_orders/Purchase_ordersView.vue'),
+},
+
+  {
+    to: '/sale_orders',
+    label: 'Sale orders',
+    icon: mdiTable,
+    component: () => import('@/views/CRUD/Sale_orders/Sale_ordersView.vue'),
+},
+
+  {
+    to: '/parts',
+    label: 'Parts',
+    icon: mdiTable,
+    component: () => import('@/views/CRUD/Parts/PartsView.vue'),
+},
+
+  {
+    to: '/stocks',
+    label: 'Stocks',
+    icon: mdiTable,
+    component: () => import('@/views/CRUD/Stocks/StocksView.vue'),
+},
+
+  {
+    to: '/services',
+    label: 'Services',
+    icon: mdiTable,
+    component: () => import('@/views/CRUD/Services/ServicesView.vue'),
+},
+
+  {
+    to: '/service_orders',
+    label: 'Service orders',
+    icon: mdiTable,
+    component: () => import('@/views/CRUD/Service_orders/Service_ordersView.vue'),
+},
+
+  {
+    to: '/vehicle_part_services',
+    label: 'Vehicle part services',
+    icon: mdiTable,
+    component: () => import('@/views/CRUD/Vehicle_part_services/Vehicle_part_servicesView.vue'),
+},
+
+  {
+    to: '/permissions',
+    label: 'Permissions',
+    icon: mdiTable,
+    component: () => import('@/views/CRUD/Permissions/PermissionsView.vue'),
 },
 
     {

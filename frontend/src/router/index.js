@@ -50,52 +50,327 @@ const routes = [
 
     {
       meta: {
-        title: 'Roles'
+        title: 'Suppliers'
       },
-      path: '/roles',
-      name: 'Roles',
-      component: () => import('@/views/CRUD/Roles/RolesView.vue'),
+      path: '/suppliers',
+      name: 'Suppliers',
+      component: () => import('@/views/CRUD/Suppliers/SuppliersView.vue'),
     },
     {
       meta: {
-        title: 'New Roles'
+        title: 'New Suppliers'
       },
-      path: '/roles/new',
-      name: 'NewRoles',
-      component: () => import('@/views/CRUD/Roles/RolesNew.vue'),
+      path: '/suppliers/new',
+      name: 'NewSuppliers',
+      component: () => import('@/views/CRUD/Suppliers/SuppliersNew.vue'),
     },
     {
       meta: {
-        title: 'Edit Roles'
+        title: 'Edit Suppliers'
       },
-      path: '/roles/:id/edit',
-      name: 'EditRoles',
-      component: () => import('@/views/CRUD/Roles/RolesEdit.vue'),
+      path: '/suppliers/:id/edit',
+      name: 'EditSuppliers',
+      component: () => import('@/views/CRUD/Suppliers/SuppliersEdit.vue'),
     },
 
     {
       meta: {
-        title: 'Testtable'
+        title: 'Invoices'
       },
-      path: '/testtable',
-      name: 'Testtable',
-      component: () => import('@/views/CRUD/Testtable/TesttableView.vue'),
+      path: '/invoices',
+      name: 'Invoices',
+      component: () => import('@/views/CRUD/Invoices/InvoicesView.vue'),
     },
     {
       meta: {
-        title: 'New Testtable'
+        title: 'New Invoices'
       },
-      path: '/testtable/new',
-      name: 'NewTesttable',
-      component: () => import('@/views/CRUD/Testtable/TesttableNew.vue'),
+      path: '/invoices/new',
+      name: 'NewInvoices',
+      component: () => import('@/views/CRUD/Invoices/InvoicesNew.vue'),
     },
     {
       meta: {
-        title: 'Edit Testtable'
+        title: 'Edit Invoices'
       },
-      path: '/testtable/:id/edit',
-      name: 'EditTesttable',
-      component: () => import('@/views/CRUD/Testtable/TesttableEdit.vue'),
+      path: '/invoices/:id/edit',
+      name: 'EditInvoices',
+      component: () => import('@/views/CRUD/Invoices/InvoicesEdit.vue'),
+    },
+
+    {
+      meta: {
+        title: 'Settings'
+      },
+      path: '/settings',
+      name: 'Settings',
+      component: () => import('@/views/CRUD/Settings/SettingsView.vue'),
+    },
+    {
+      meta: {
+        title: 'New Settings'
+      },
+      path: '/settings/new',
+      name: 'NewSettings',
+      component: () => import('@/views/CRUD/Settings/SettingsNew.vue'),
+    },
+    {
+      meta: {
+        title: 'Edit Settings'
+      },
+      path: '/settings/:id/edit',
+      name: 'EditSettings',
+      component: () => import('@/views/CRUD/Settings/SettingsEdit.vue'),
+    },
+
+    {
+      meta: {
+        title: 'Orders'
+      },
+      path: '/orders',
+      name: 'Orders',
+      component: () => import('@/views/CRUD/Orders/OrdersView.vue'),
+    },
+    {
+      meta: {
+        title: 'New Orders'
+      },
+      path: '/orders/new',
+      name: 'NewOrders',
+      component: () => import('@/views/CRUD/Orders/OrdersNew.vue'),
+    },
+    {
+      meta: {
+        title: 'Edit Orders'
+      },
+      path: '/orders/:id/edit',
+      name: 'EditOrders',
+      component: () => import('@/views/CRUD/Orders/OrdersEdit.vue'),
+    },
+
+    {
+      meta: {
+        title: 'Order_details'
+      },
+      path: '/order_details',
+      name: 'Order_details',
+      component: () => import('@/views/CRUD/Order_details/Order_detailsView.vue'),
+    },
+    {
+      meta: {
+        title: 'New Order_details'
+      },
+      path: '/order_details/new',
+      name: 'NewOrder_details',
+      component: () => import('@/views/CRUD/Order_details/Order_detailsNew.vue'),
+    },
+    {
+      meta: {
+        title: 'Edit Order_details'
+      },
+      path: '/order_details/:id/edit',
+      name: 'EditOrder_details',
+      component: () => import('@/views/CRUD/Order_details/Order_detailsEdit.vue'),
+    },
+
+    {
+      meta: {
+        title: 'Purchase_orders'
+      },
+      path: '/purchase_orders',
+      name: 'Purchase_orders',
+      component: () => import('@/views/CRUD/Purchase_orders/Purchase_ordersView.vue'),
+    },
+    {
+      meta: {
+        title: 'New Purchase_orders'
+      },
+      path: '/purchase_orders/new',
+      name: 'NewPurchase_orders',
+      component: () => import('@/views/CRUD/Purchase_orders/Purchase_ordersNew.vue'),
+    },
+    {
+      meta: {
+        title: 'Edit Purchase_orders'
+      },
+      path: '/purchase_orders/:id/edit',
+      name: 'EditPurchase_orders',
+      component: () => import('@/views/CRUD/Purchase_orders/Purchase_ordersEdit.vue'),
+    },
+
+    {
+      meta: {
+        title: 'Sale_orders'
+      },
+      path: '/sale_orders',
+      name: 'Sale_orders',
+      component: () => import('@/views/CRUD/Sale_orders/Sale_ordersView.vue'),
+    },
+    {
+      meta: {
+        title: 'New Sale_orders'
+      },
+      path: '/sale_orders/new',
+      name: 'NewSale_orders',
+      component: () => import('@/views/CRUD/Sale_orders/Sale_ordersNew.vue'),
+    },
+    {
+      meta: {
+        title: 'Edit Sale_orders'
+      },
+      path: '/sale_orders/:id/edit',
+      name: 'EditSale_orders',
+      component: () => import('@/views/CRUD/Sale_orders/Sale_ordersEdit.vue'),
+    },
+
+    {
+      meta: {
+        title: 'Parts'
+      },
+      path: '/parts',
+      name: 'Parts',
+      component: () => import('@/views/CRUD/Parts/PartsView.vue'),
+    },
+    {
+      meta: {
+        title: 'New Parts'
+      },
+      path: '/parts/new',
+      name: 'NewParts',
+      component: () => import('@/views/CRUD/Parts/PartsNew.vue'),
+    },
+    {
+      meta: {
+        title: 'Edit Parts'
+      },
+      path: '/parts/:id/edit',
+      name: 'EditParts',
+      component: () => import('@/views/CRUD/Parts/PartsEdit.vue'),
+    },
+
+    {
+      meta: {
+        title: 'Stocks'
+      },
+      path: '/stocks',
+      name: 'Stocks',
+      component: () => import('@/views/CRUD/Stocks/StocksView.vue'),
+    },
+    {
+      meta: {
+        title: 'New Stocks'
+      },
+      path: '/stocks/new',
+      name: 'NewStocks',
+      component: () => import('@/views/CRUD/Stocks/StocksNew.vue'),
+    },
+    {
+      meta: {
+        title: 'Edit Stocks'
+      },
+      path: '/stocks/:id/edit',
+      name: 'EditStocks',
+      component: () => import('@/views/CRUD/Stocks/StocksEdit.vue'),
+    },
+
+    {
+      meta: {
+        title: 'Services'
+      },
+      path: '/services',
+      name: 'Services',
+      component: () => import('@/views/CRUD/Services/ServicesView.vue'),
+    },
+    {
+      meta: {
+        title: 'New Services'
+      },
+      path: '/services/new',
+      name: 'NewServices',
+      component: () => import('@/views/CRUD/Services/ServicesNew.vue'),
+    },
+    {
+      meta: {
+        title: 'Edit Services'
+      },
+      path: '/services/:id/edit',
+      name: 'EditServices',
+      component: () => import('@/views/CRUD/Services/ServicesEdit.vue'),
+    },
+
+    {
+      meta: {
+        title: 'Service_orders'
+      },
+      path: '/service_orders',
+      name: 'Service_orders',
+      component: () => import('@/views/CRUD/Service_orders/Service_ordersView.vue'),
+    },
+    {
+      meta: {
+        title: 'New Service_orders'
+      },
+      path: '/service_orders/new',
+      name: 'NewService_orders',
+      component: () => import('@/views/CRUD/Service_orders/Service_ordersNew.vue'),
+    },
+    {
+      meta: {
+        title: 'Edit Service_orders'
+      },
+      path: '/service_orders/:id/edit',
+      name: 'EditService_orders',
+      component: () => import('@/views/CRUD/Service_orders/Service_ordersEdit.vue'),
+    },
+
+    {
+      meta: {
+        title: 'Vehicle_part_services'
+      },
+      path: '/vehicle_part_services',
+      name: 'Vehicle_part_services',
+      component: () => import('@/views/CRUD/Vehicle_part_services/Vehicle_part_servicesView.vue'),
+    },
+    {
+      meta: {
+        title: 'New Vehicle_part_services'
+      },
+      path: '/vehicle_part_services/new',
+      name: 'NewVehicle_part_services',
+      component: () => import('@/views/CRUD/Vehicle_part_services/Vehicle_part_servicesNew.vue'),
+    },
+    {
+      meta: {
+        title: 'Edit Vehicle_part_services'
+      },
+      path: '/vehicle_part_services/:id/edit',
+      name: 'EditVehicle_part_services',
+      component: () => import('@/views/CRUD/Vehicle_part_services/Vehicle_part_servicesEdit.vue'),
+    },
+
+    {
+      meta: {
+        title: 'Permissions'
+      },
+      path: '/permissions',
+      name: 'Permissions',
+      component: () => import('@/views/CRUD/Permissions/PermissionsView.vue'),
+    },
+    {
+      meta: {
+        title: 'New Permissions'
+      },
+      path: '/permissions/new',
+      name: 'NewPermissions',
+      component: () => import('@/views/CRUD/Permissions/PermissionsNew.vue'),
+    },
+    {
+      meta: {
+        title: 'Edit Permissions'
+      },
+      path: '/permissions/:id/edit',
+      name: 'EditPermissions',
+      component: () => import('@/views/CRUD/Permissions/PermissionsEdit.vue'),
     },
 
   {
