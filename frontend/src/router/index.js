@@ -350,27 +350,152 @@ const routes = [
 
     {
       meta: {
-        title: 'Permissions'
+        title: 'Warehouses'
       },
-      path: '/permissions',
-      name: 'Permissions',
-      component: () => import('@/views/CRUD/Permissions/PermissionsView.vue'),
+      path: '/warehouses',
+      name: 'Warehouses',
+      component: () => import('@/views/CRUD/Warehouses/WarehousesView.vue'),
     },
     {
       meta: {
-        title: 'New Permissions'
+        title: 'New Warehouses'
       },
-      path: '/permissions/new',
-      name: 'NewPermissions',
-      component: () => import('@/views/CRUD/Permissions/PermissionsNew.vue'),
+      path: '/warehouses/new',
+      name: 'NewWarehouses',
+      component: () => import('@/views/CRUD/Warehouses/WarehousesNew.vue'),
     },
     {
       meta: {
-        title: 'Edit Permissions'
+        title: 'Edit Warehouses'
       },
-      path: '/permissions/:id/edit',
-      name: 'EditPermissions',
-      component: () => import('@/views/CRUD/Permissions/PermissionsEdit.vue'),
+      path: '/warehouses/:id/edit',
+      name: 'EditWarehouses',
+      component: () => import('@/views/CRUD/Warehouses/WarehousesEdit.vue'),
+    },
+
+    {
+      meta: {
+        title: 'Carts'
+      },
+      path: '/carts',
+      name: 'Carts',
+      component: () => import('@/views/CRUD/Carts/CartsView.vue'),
+    },
+    {
+      meta: {
+        title: 'New Carts'
+      },
+      path: '/carts/new',
+      name: 'NewCarts',
+      component: () => import('@/views/CRUD/Carts/CartsNew.vue'),
+    },
+    {
+      meta: {
+        title: 'Edit Carts'
+      },
+      path: '/carts/:id/edit',
+      name: 'EditCarts',
+      component: () => import('@/views/CRUD/Carts/CartsEdit.vue'),
+    },
+
+    {
+      meta: {
+        title: 'Cart_items'
+      },
+      path: '/cart_items',
+      name: 'Cart_items',
+      component: () => import('@/views/CRUD/Cart_items/Cart_itemsView.vue'),
+    },
+    {
+      meta: {
+        title: 'New Cart_items'
+      },
+      path: '/cart_items/new',
+      name: 'NewCart_items',
+      component: () => import('@/views/CRUD/Cart_items/Cart_itemsNew.vue'),
+    },
+    {
+      meta: {
+        title: 'Edit Cart_items'
+      },
+      path: '/cart_items/:id/edit',
+      name: 'EditCart_items',
+      component: () => import('@/views/CRUD/Cart_items/Cart_itemsEdit.vue'),
+    },
+
+    {
+      meta: {
+        title: 'Notifications'
+      },
+      path: '/notifications',
+      name: 'Notifications',
+      component: () => import('@/views/CRUD/Notifications/NotificationsView.vue'),
+    },
+    {
+      meta: {
+        title: 'New Notifications'
+      },
+      path: '/notifications/new',
+      name: 'NewNotifications',
+      component: () => import('@/views/CRUD/Notifications/NotificationsNew.vue'),
+    },
+    {
+      meta: {
+        title: 'Edit Notifications'
+      },
+      path: '/notifications/:id/edit',
+      name: 'EditNotifications',
+      component: () => import('@/views/CRUD/Notifications/NotificationsEdit.vue'),
+    },
+
+    {
+      meta: {
+        title: 'Reputation_history'
+      },
+      path: '/reputation_history',
+      name: 'Reputation_history',
+      component: () => import('@/views/CRUD/Reputation_history/Reputation_historyView.vue'),
+    },
+    {
+      meta: {
+        title: 'New Reputation_history'
+      },
+      path: '/reputation_history/new',
+      name: 'NewReputation_history',
+      component: () => import('@/views/CRUD/Reputation_history/Reputation_historyNew.vue'),
+    },
+    {
+      meta: {
+        title: 'Edit Reputation_history'
+      },
+      path: '/reputation_history/:id/edit',
+      name: 'EditReputation_history',
+      component: () => import('@/views/CRUD/Reputation_history/Reputation_historyEdit.vue'),
+    },
+
+    {
+      meta: {
+        title: 'Inventory_history'
+      },
+      path: '/inventory_history',
+      name: 'Inventory_history',
+      component: () => import('@/views/CRUD/Inventory_history/Inventory_historyView.vue'),
+    },
+    {
+      meta: {
+        title: 'New Inventory_history'
+      },
+      path: '/inventory_history/new',
+      name: 'NewInventory_history',
+      component: () => import('@/views/CRUD/Inventory_history/Inventory_historyNew.vue'),
+    },
+    {
+      meta: {
+        title: 'Edit Inventory_history'
+      },
+      path: '/inventory_history/:id/edit',
+      name: 'EditInventory_history',
+      component: () => import('@/views/CRUD/Inventory_history/Inventory_historyEdit.vue'),
     },
 
   {

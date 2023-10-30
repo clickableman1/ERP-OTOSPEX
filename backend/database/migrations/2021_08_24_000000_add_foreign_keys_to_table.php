@@ -87,7 +87,37 @@ class AddForeignKeysToTable extends Migration
 
         });
 
-        Schema::table('permissions', function (Blueprint $table) {
+        Schema::table('warehouses', function (Blueprint $table) {
+            $table->foreign('created_by_user')->references('id')->on('users');
+            $table->foreign('updated_by_user')->references('id')->on('users');
+
+        });
+
+        Schema::table('carts', function (Blueprint $table) {
+            $table->foreign('created_by_user')->references('id')->on('users');
+            $table->foreign('updated_by_user')->references('id')->on('users');
+
+        });
+
+        Schema::table('cart_items', function (Blueprint $table) {
+            $table->foreign('created_by_user')->references('id')->on('users');
+            $table->foreign('updated_by_user')->references('id')->on('users');
+
+        });
+
+        Schema::table('notifications', function (Blueprint $table) {
+            $table->foreign('created_by_user')->references('id')->on('users');
+            $table->foreign('updated_by_user')->references('id')->on('users');
+
+        });
+
+        Schema::table('reputation_history', function (Blueprint $table) {
+            $table->foreign('created_by_user')->references('id')->on('users');
+            $table->foreign('updated_by_user')->references('id')->on('users');
+
+        });
+
+        Schema::table('inventory_history', function (Blueprint $table) {
             $table->foreign('created_by_user')->references('id')->on('users');
             $table->foreign('updated_by_user')->references('id')->on('users');
 

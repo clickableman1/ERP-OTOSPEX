@@ -13,7 +13,7 @@ import CardBoxWidget from '@/components/CardBoxWidget.vue'
 const titleStack = ref(['Admin', 'Dashboard'])
 
 const counts = reactive({
-  users: 0,suppliers: 0,invoices: 0,settings: 0,orders: 0,order_details: 0,purchase_orders: 0,sale_orders: 0,parts: 0,stocks: 0,services: 0,service_orders: 0,vehicle_part_services: 0,permissions: 0,
+  users: 0,suppliers: 0,invoices: 0,settings: 0,orders: 0,order_details: 0,purchase_orders: 0,sale_orders: 0,parts: 0,stocks: 0,services: 0,service_orders: 0,vehicle_part_services: 0,warehouses: 0,carts: 0,cart_items: 0,notifications: 0,reputation_history: 0,inventory_history: 0,
 })
 
 onMounted(() => {
@@ -31,7 +31,12 @@ onMounted(() => {
     const { data: { count: services } } = await axios.get('/services/count');
     const { data: { count: service_orders } } = await axios.get('/service_orders/count');
     const { data: { count: vehicle_part_services } } = await axios.get('/vehicle_part_services/count');
-    const { data: { count: permissions } } = await axios.get('/permissions/count');
+    const { data: { count: warehouses } } = await axios.get('/warehouses/count');
+    const { data: { count: carts } } = await axios.get('/carts/count');
+    const { data: { count: cart_items } } = await axios.get('/cart_items/count');
+    const { data: { count: notifications } } = await axios.get('/notifications/count');
+    const { data: { count: reputation_history } } = await axios.get('/reputation_history/count');
+    const { data: { count: inventory_history } } = await axios.get('/inventory_history/count');
 
     counts.users = users;
     counts.suppliers = suppliers;
@@ -46,7 +51,12 @@ onMounted(() => {
     counts.services = services;
     counts.service_orders = service_orders;
     counts.vehicle_part_services = vehicle_part_services;
-    counts.permissions = permissions;
+    counts.warehouses = warehouses;
+    counts.carts = carts;
+    counts.cart_items = cart_items;
+    counts.notifications = notifications;
+    counts.reputation_history = reputation_history;
+    counts.inventory_history = inventory_history;
 
   };
   fetchData();
@@ -143,12 +153,42 @@ onMounted(() => {
         :icon="mdiInformation"
         :number="counts.vehicle_part_services"
         label="Vehicle_part_services"
-          /></a><a href="#/permissions">
+          /></a><a href="#/warehouses">
         <CardBoxWidget
         color="text-blue-500"
         :icon="mdiInformation"
-        :number="counts.permissions"
-        label="Permissions"
+        :number="counts.warehouses"
+        label="Warehouses"
+          /></a><a href="#/carts">
+        <CardBoxWidget
+        color="text-blue-500"
+        :icon="mdiInformation"
+        :number="counts.carts"
+        label="Carts"
+          /></a><a href="#/cart_items">
+        <CardBoxWidget
+        color="text-blue-500"
+        :icon="mdiInformation"
+        :number="counts.cart_items"
+        label="Cart_items"
+          /></a><a href="#/notifications">
+        <CardBoxWidget
+        color="text-blue-500"
+        :icon="mdiInformation"
+        :number="counts.notifications"
+        label="Notifications"
+          /></a><a href="#/reputation_history">
+        <CardBoxWidget
+        color="text-blue-500"
+        :icon="mdiInformation"
+        :number="counts.reputation_history"
+        label="Reputation_history"
+          /></a><a href="#/inventory_history">
+        <CardBoxWidget
+        color="text-blue-500"
+        :icon="mdiInformation"
+        :number="counts.inventory_history"
+        label="Inventory_history"
           /></a>
 
     </div>

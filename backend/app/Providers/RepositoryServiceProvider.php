@@ -32,8 +32,18 @@ use App\Repositories\Service_ordersRepositoryInterface;
 use App\Repositories\Eloquent\Service_ordersRepository;
 use App\Repositories\Vehicle_part_servicesRepositoryInterface;
 use App\Repositories\Eloquent\Vehicle_part_servicesRepository;
-use App\Repositories\PermissionsRepositoryInterface;
-use App\Repositories\Eloquent\PermissionsRepository;
+use App\Repositories\WarehousesRepositoryInterface;
+use App\Repositories\Eloquent\WarehousesRepository;
+use App\Repositories\CartsRepositoryInterface;
+use App\Repositories\Eloquent\CartsRepository;
+use App\Repositories\Cart_itemsRepositoryInterface;
+use App\Repositories\Eloquent\Cart_itemsRepository;
+use App\Repositories\NotificationsRepositoryInterface;
+use App\Repositories\Eloquent\NotificationsRepository;
+use App\Repositories\Reputation_historyRepositoryInterface;
+use App\Repositories\Eloquent\Reputation_historyRepository;
+use App\Repositories\Inventory_historyRepositoryInterface;
+use App\Repositories\Eloquent\Inventory_historyRepository;
 use App\Repositories\FilesRepositoryInterface;
 use App\Repositories\Eloquent\FilesRepository;
 
@@ -84,7 +94,17 @@ class RepositoryServiceProvider extends ServiceProvider
 
         $this->app->bind(Vehicle_part_servicesRepositoryInterface::class, Vehicle_part_servicesRepository::class);
 
-        $this->app->bind(PermissionsRepositoryInterface::class, PermissionsRepository::class);
+        $this->app->bind(WarehousesRepositoryInterface::class, WarehousesRepository::class);
+
+        $this->app->bind(CartsRepositoryInterface::class, CartsRepository::class);
+
+        $this->app->bind(Cart_itemsRepositoryInterface::class, Cart_itemsRepository::class);
+
+        $this->app->bind(NotificationsRepositoryInterface::class, NotificationsRepository::class);
+
+        $this->app->bind(Reputation_historyRepositoryInterface::class, Reputation_historyRepository::class);
+
+        $this->app->bind(Inventory_historyRepositoryInterface::class, Inventory_historyRepository::class);
         $this->app->bind(FilesRepositoryInterface::class, FilesRepository::class);
     }
 }

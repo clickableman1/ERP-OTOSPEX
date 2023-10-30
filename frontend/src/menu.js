@@ -114,10 +114,45 @@ export default [
 },
 
   {
-    to: '/permissions',
-    label: 'Permissions',
+    to: '/warehouses',
+    label: 'Warehouses',
     icon: mdiTable,
-    component: () => import('@/views/CRUD/Permissions/PermissionsView.vue'),
+    component: () => import('@/views/CRUD/Warehouses/WarehousesView.vue'),
+},
+
+  {
+    to: '/carts',
+    label: 'Carts',
+    icon: mdiTable,
+    component: () => import('@/views/CRUD/Carts/CartsView.vue'),
+},
+
+  {
+    to: '/cart_items',
+    label: 'Cart items',
+    icon: mdiTable,
+    component: () => import('@/views/CRUD/Cart_items/Cart_itemsView.vue'),
+},
+
+  {
+    to: '/notifications',
+    label: 'Notifications',
+    icon: mdiTable,
+    component: () => import('@/views/CRUD/Notifications/NotificationsView.vue'),
+},
+
+  {
+    to: '/reputation_history',
+    label: 'Reputation history',
+    icon: mdiTable,
+    component: () => import('@/views/CRUD/Reputation_history/Reputation_historyView.vue'),
+},
+
+  {
+    to: '/inventory_history',
+    label: 'Inventory history',
+    icon: mdiTable,
+    component: () => import('@/views/CRUD/Inventory_history/Inventory_historyView.vue'),
 },
 
     {

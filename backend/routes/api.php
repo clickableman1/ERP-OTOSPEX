@@ -17,7 +17,12 @@ use App\Http\Controllers\Api\StocksController;
 use App\Http\Controllers\Api\ServicesController;
 use App\Http\Controllers\Api\Service_ordersController;
 use App\Http\Controllers\Api\Vehicle_part_servicesController;
-use App\Http\Controllers\Api\PermissionsController;
+use App\Http\Controllers\Api\WarehousesController;
+use App\Http\Controllers\Api\CartsController;
+use App\Http\Controllers\Api\Cart_itemsController;
+use App\Http\Controllers\Api\NotificationsController;
+use App\Http\Controllers\Api\Reputation_historyController;
+use App\Http\Controllers\Api\Inventory_historyController;
 use App\Http\Controllers\Api\FilesController;
 
 Route::get('analytics', fn() => Storage::disk('local')->get('analytics.json'))->middleware('auth:api');
@@ -84,9 +89,29 @@ Route::group([
     Route::get('vehicle_part_services/count', [Vehicle_part_servicesController::class, 'count']);
     Route::resource('vehicle_part_services', Vehicle_part_servicesController::class);
 
-    Route::get('permissions/autocomplete', [PermissionsController::class, 'findAllAutocomplete']);
-    Route::get('permissions/count', [PermissionsController::class, 'count']);
-    Route::resource('permissions', PermissionsController::class);
+    Route::get('warehouses/autocomplete', [WarehousesController::class, 'findAllAutocomplete']);
+    Route::get('warehouses/count', [WarehousesController::class, 'count']);
+    Route::resource('warehouses', WarehousesController::class);
+
+    Route::get('carts/autocomplete', [CartsController::class, 'findAllAutocomplete']);
+    Route::get('carts/count', [CartsController::class, 'count']);
+    Route::resource('carts', CartsController::class);
+
+    Route::get('cart_items/autocomplete', [Cart_itemsController::class, 'findAllAutocomplete']);
+    Route::get('cart_items/count', [Cart_itemsController::class, 'count']);
+    Route::resource('cart_items', Cart_itemsController::class);
+
+    Route::get('notifications/autocomplete', [NotificationsController::class, 'findAllAutocomplete']);
+    Route::get('notifications/count', [NotificationsController::class, 'count']);
+    Route::resource('notifications', NotificationsController::class);
+
+    Route::get('reputation_history/autocomplete', [Reputation_historyController::class, 'findAllAutocomplete']);
+    Route::get('reputation_history/count', [Reputation_historyController::class, 'count']);
+    Route::resource('reputation_history', Reputation_historyController::class);
+
+    Route::get('inventory_history/autocomplete', [Inventory_historyController::class, 'findAllAutocomplete']);
+    Route::get('inventory_history/count', [Inventory_historyController::class, 'count']);
+    Route::resource('inventory_history', Inventory_historyController::class);
 
 });
 
